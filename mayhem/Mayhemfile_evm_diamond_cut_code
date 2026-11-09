@@ -1,0 +1,5 @@
+project: savantenvs/wallet-core
+target: evm_diamond_cut_code
+cmds:
+  - cmd: /mayhem/evm_diamond_cut_code
+    libfuzzer: true

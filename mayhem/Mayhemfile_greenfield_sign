@@ -1,0 +1,5 @@
+project: savantenvs/wallet-core
+target: greenfield_sign
+cmds:
+  - cmd: /mayhem/greenfield_sign
+    libfuzzer: true

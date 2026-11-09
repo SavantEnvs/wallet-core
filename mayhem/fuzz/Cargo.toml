@@ -1,0 +1,33 @@
+[package]
+name = "wallet-core-mayhem-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = { version = "0.4", features = ["arbitrary-derive"] }
+
+[dependencies.tw_encoding]
+path = "../../rust/tw_encoding"
+features = ["arbitrary"]
+
+# Own workspace root: must not join upstream's rust/ workspace.
+[workspace]
+
+[profile.release]
+debug = 1
+
+[[bin]]
+name = "base_encode"
+path = "fuzz_targets/base_encode.rs"
+test = false
+doc = false
+
+[[bin]]
+name = "base_decode"
+path = "fuzz_targets/base_decode.rs"
+test = false
+doc = false

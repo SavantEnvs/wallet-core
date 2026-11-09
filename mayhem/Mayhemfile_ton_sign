@@ -1,0 +1,5 @@
+project: savantenvs/wallet-core
+target: ton_sign
+cmds:
+  - cmd: /mayhem/ton_sign
+    libfuzzer: true

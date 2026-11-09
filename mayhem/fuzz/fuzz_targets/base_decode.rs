@@ -1,0 +1,27 @@
+// Port of rust/tw_encoding/fuzz/fuzz_targets/base_decode.rs, which no longer compiles:
+// `base64::decode` now takes a `base64::Config` instead of an `is_url` bool.
+#![no_main]
+
+use libfuzzer_sys::{arbitrary, fuzz_target};
+use tw_encoding::{base32, base58, base64, ffi::Base58Alphabet};
+
+#[derive(arbitrary::Arbitrary, Debug)]
+struct BaseDecodeInput<'a> {
+    data: &'a str,
+    alphabet_base58: Base58Alphabet,
+    padding: bool,
+    is_url: bool,
+}
+
+fuzz_target!(|input: BaseDecodeInput<'_>| {
+    base32::decode(input.data, None, input.padding).ok();
+    base58::decode(input.data, input.alphabet_base58.into()).ok();
+    base64::decode(
+        input.data,
+        base64::Config {
+            url: input.is_url,
+            pad: input.padding,
+        },
+    )
+    .ok();
+});

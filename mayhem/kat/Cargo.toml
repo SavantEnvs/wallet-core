@@ -1,0 +1,21 @@
+# Empty workspace table: this crate is its own workspace root, decoupled from upstream's
+# rust/Cargo.toml (which we must not edit). Entirely additive under mayhem/.
+[workspace]
+
+[package]
+name = "mayhem-kat"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+# Known-answer-test probe for mayhem/test.sh. `cargo test` binaries are not a reliable
+# sabotage target; this is a plain dynamically linked `[[bin]]` that prints exact computed values.
+
+[dependencies]
+tw_encoding = { path = "../../rust/tw_encoding" }
+tw_hash = { path = "../../rust/tw_hash" }
+tw_keypair = { path = "../../rust/tw_keypair" }
+
+[[bin]]
+name = "kat"
+path = "src/main.rs"

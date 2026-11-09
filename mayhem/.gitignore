@@ -1,0 +1,7 @@
+fuzz-target/
+kat/target/
+kat/Cargo.lock
+fuzz/target/
+fuzz/Cargo.lock
+fuzz-aptos/target/
+fuzz-aptos/Cargo.lock

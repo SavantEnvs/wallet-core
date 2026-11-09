@@ -1,0 +1,5 @@
+project: savantenvs/wallet-core
+target: aptos_sign
+cmds:
+  - cmd: /mayhem/aptos_sign
+    libfuzzer: true

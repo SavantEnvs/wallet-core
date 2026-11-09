@@ -1,0 +1,5 @@
+project: savantenvs/wallet-core
+target: tw_private_sign
+cmds:
+  - cmd: /mayhem/tw_private_sign
+    libfuzzer: true

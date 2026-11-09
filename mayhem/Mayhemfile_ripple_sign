@@ -1,0 +1,5 @@
+project: savantenvs/wallet-core
+target: ripple_sign
+cmds:
+  - cmd: /mayhem/ripple_sign
+    libfuzzer: true

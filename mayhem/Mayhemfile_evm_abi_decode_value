@@ -1,0 +1,5 @@
+project: savantenvs/wallet-core
+target: evm_abi_decode_value
+cmds:
+  - cmd: /mayhem/evm_abi_decode_value
+    libfuzzer: true

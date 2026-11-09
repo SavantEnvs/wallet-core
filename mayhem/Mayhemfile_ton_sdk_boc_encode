@@ -1,0 +1,5 @@
+project: savantenvs/wallet-core
+target: ton_sdk_boc_encode
+cmds:
+  - cmd: /mayhem/ton_sdk_boc_encode
+    libfuzzer: true

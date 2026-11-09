@@ -1,0 +1,5 @@
+project: savantenvs/wallet-core
+target: sui_sign
+cmds:
+  - cmd: /mayhem/sui_sign
+    libfuzzer: true

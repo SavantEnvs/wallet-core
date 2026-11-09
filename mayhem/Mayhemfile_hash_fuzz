@@ -1,0 +1,5 @@
+project: savantenvs/wallet-core
+target: hash_fuzz
+cmds:
+  - cmd: /mayhem/hash_fuzz
+    libfuzzer: true

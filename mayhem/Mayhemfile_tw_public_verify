@@ -1,0 +1,5 @@
+project: savantenvs/wallet-core
+target: tw_public_verify
+cmds:
+  - cmd: /mayhem/tw_public_verify
+    libfuzzer: true

@@ -1,0 +1,5 @@
+project: savantenvs/wallet-core
+target: tw_private_to_public
+cmds:
+  - cmd: /mayhem/tw_private_to_public
+    libfuzzer: true

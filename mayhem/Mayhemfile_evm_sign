@@ -1,0 +1,5 @@
+project: savantenvs/wallet-core
+target: evm_sign
+cmds:
+  - cmd: /mayhem/evm_sign
+    libfuzzer: true

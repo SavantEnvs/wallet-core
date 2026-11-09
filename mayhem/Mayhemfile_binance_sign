@@ -1,0 +1,5 @@
+project: savantenvs/wallet-core
+target: binance_sign
+cmds:
+  - cmd: /mayhem/binance_sign
+    libfuzzer: true

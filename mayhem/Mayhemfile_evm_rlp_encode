@@ -1,0 +1,5 @@
+project: savantenvs/wallet-core
+target: evm_rlp_encode
+cmds:
+  - cmd: /mayhem/evm_rlp_encode
+    libfuzzer: true

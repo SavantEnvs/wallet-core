@@ -1,0 +1,27 @@
+[package]
+name = "wallet-core-mayhem-fuzz-aptos"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+tw_proto = { path = "../../rust/tw_proto", features = ["fuzz"] }
+
+[dependencies.tw_aptos]
+path = "../../rust/chains/tw_aptos"
+
+# Own workspace root: must not join upstream's rust/ workspace.
+[workspace]
+
+[profile.release]
+debug = 1
+
+[[bin]]
+name = "sign"
+path = "fuzz_targets/sign.rs"
+test = false
+doc = false

@@ -1,0 +1,5 @@
+project: savantenvs/wallet-core
+target: cosmos_sdk_sign
+cmds:
+  - cmd: /mayhem/cosmos_sdk_sign
+    libfuzzer: true

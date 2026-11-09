@@ -1,0 +1,5 @@
+project: savantenvs/wallet-core
+target: cbor_encode_decode
+cmds:
+  - cmd: /mayhem/cbor_encode_decode
+    libfuzzer: true

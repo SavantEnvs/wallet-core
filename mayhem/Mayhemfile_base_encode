@@ -1,0 +1,5 @@
+project: savantenvs/wallet-core
+target: base_encode
+cmds:
+  - cmd: /mayhem/base_encode
+    libfuzzer: true
